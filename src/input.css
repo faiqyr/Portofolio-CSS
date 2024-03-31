@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'inter', sans-serif;
+}
+
+.navbar-fixed {
+    @apply fixed z-[9999] bg-slate-500 bg-opacity-80;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2)
+}
+
+.hamburger-line {
+    @apply w-[25px] h-[2px] my-2 block bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply scale-0;
+}
+
+/* CSS Footer Start */
+/* Footer Styles */
+footer {
+background-color: transparent;
+color: white;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+
+.brand, .navigation, .contact {
+padding: 20px;
+}
+
+.bottom-bar {
+text-align: center;
+padding: 10px;
+background-color: #dfae4e; /* Darker shade */
+width: 100%;
+}
+
+#myBtn {
+position: fixed; 
+bottom: 20px; 
+right: 30px; 
+border: 2px solid white;
+padding: 10px;
+border-radius: 10px;
+border-color:#dfae4e;
+}
+
+/* CSS Footer End */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    position: fixed; /* Menambahkan properti ini */
+    width: 100%; /* Menambahkan properti ini */
+    background-color: transparent; /* Menambahkan properti ini */
+    z-index: 3; /* Menambahkan properti ini */
+  }
+  
+  .logo {
+    margin-left: 20px;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-right:20px; 
+  }
+  
+  .burger {
+    display:none; 
+    flex-direction: column; 
+    cursor:pointer; 
+  }
+  
+  .line1, .line2, .line3 { 
+    width:25px; 
+    height:2px; 
+    background-color:rgb(255, 255, 255); 
+    margin:3px;
+    margin-left: 10px; /* Menambahkan margin kiri */
+    transition : all ease-in-out .5s ; 
+  }
+  
+  
+  @media screen and (max-width :768px) {
+    .nav-links { 
+      display:none;
+    }
+  
+    .burger {
+      display:flex;
+    }
+  
+    .nav-active {
+      display:block;
+    }
+  
+    .toggle .line1 { 
+      transform : rotate(-45deg) translate(-5px ,6px); 
+    }
+    
+    .toggle .line2 { 
+      opacity :0;
+    }
+    
+    .toggle .line3 { 
+      transform : rotate(45deg) translate(-5px ,-6px); 
+    }
+  }
+  
+  .hamburger-line {
+      @apply w-[30px] h-[2px] my-2 block text-secondary
+  }
+
+
+
+
+
+
+
+
+
+
+
